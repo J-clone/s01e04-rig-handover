@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-10-31
 ---
 
 # Morning digest
@@ -77,3 +78,17 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader | — | codex · gpt-6-astra · high | 2026-10-31 |
+| 2 | Digest page: GET /digest/:night | #1 | codex · gpt-6-astra · high | 2026-10-31 |
+| 3 | Digest JSON: GET /api/digest/:night | #1, #2 | codex · gpt-6-astra · high | 2026-10-31 |
+| 4 | Board links to digests | #1, #2 | codex · gpt-6-astra · high | 2026-10-31 |
+| 5 | Route tests for digest page and JSON | #2, #3 | codex · gpt-6-astra · high | 2026-10-31 |
+| 6 | Preview for review | #2, #3, #4, #5 | claude-code · fable-5.1 · high | 2026-10-31 |
+| 7 | Clean up the preview marker | #6 | claude-code · fable-5.1 · high | 2026-10-31 |
+
+The preview at https://s01e04-rig-preview.pages.dev/ was uploaded over on 31 October with `LANE_MARKER` unset and no longer shows the lane marker.
